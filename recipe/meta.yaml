@@ -1,5 +1,5 @@
 {% set name = "flake8-simplify" %}
-{% set version = "0.14.5" %}
+{% set version = "0.14.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: 0bf8b1d60cf35d3e7cf8871194445589778f49ce81a35060f2fe3e0501f5792e
+  sha256: c4008db8016707684a1f0502ee69f3c2da37687d3cf7031cc1f326bf5986bf47
 
 build:
   noarch: python
