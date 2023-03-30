@@ -1,11 +1,11 @@
-About flake8-simplify
-=====================
+About flake8-simplify-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flake8-simplify-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/MartinThoma/flake8-simplify
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/flake8-simplify-feedstock/blob/main/LICENSE.txt)
 
 Summary: A flake8 plugin that helps you simplify your code.
 
