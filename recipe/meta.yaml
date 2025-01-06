@@ -27,7 +27,7 @@ test:
   requires:
     - python {{ python_min }}
   commands:
-    - flake8 --version | grep flake8-simplify
+    - flake8 --version | grep flake8_simplify
 
 about:
   home: https://github.com/MartinThoma/flake8-simplify
