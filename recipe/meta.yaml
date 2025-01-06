@@ -21,7 +21,6 @@ requirements:
   run:
     - python >={{ python_min }}
     - flake8 >=3.7
-    - importlib_metadata >=0.9
     - astor >=0.1
 
 test:
