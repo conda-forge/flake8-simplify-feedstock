@@ -6,27 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
   sha256: c95ff1dcc1de5949af47e0087cbf1164445881131b15bcd7a71252670f492f4d
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - flake8 >=3.7
-    - importlib_metadata >=0.9
     - astor >=0.1
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
-    - flake8 --version | grep flake8-simplify
+    - flake8 --version | grep flake8_simplify
 
 about:
   home: https://github.com/MartinThoma/flake8-simplify
