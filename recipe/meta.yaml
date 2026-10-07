@@ -1,13 +1,13 @@
 {% set name = "flake8-simplify" %}
-{% set version = "0.30.0" %}
+{% set version = "0.31.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
-  sha256: 61bff74fab73884e1ec12e472d67e7e789043028ff858e5f9af389d392d65b82
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace("-", "_") }}-{{ version }}.tar.gz
+  sha256: f42e26073d36ea0ee63da1449d88eef96f7cdfff351aa70b2ed0cf27e0510ccd
 
 build:
   noarch: python
@@ -18,6 +18,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - uv-build >=0.9,<0.13
   run:
     - python >={{ python_min }}
     - flake8 >=3.7
